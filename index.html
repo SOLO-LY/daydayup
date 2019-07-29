@@ -20,21 +20,107 @@ overflow-x:hidden;
 			height: 350px;
 			width: 350px;
 		}
-		
+		.txt{
+			width: 350px;
+			height: 1000px;
+			overflow: hidden;
+		}
+		div span {
+			color: red;
+		}
 	</style>
 	<body>
 		<div class="dpsImg">
 			<img src="BG.png"/>
 		</div>
-		<div class="">
-			<input type="button" name="button" id="button" value="羁绊" onclick="wopen()"/>
-		</div>
+		<div>
+	<form>
+			<input type="button" value="小窗口请点击" onclick="wopen()"/>
+			<br />
+			<input type="button" value="羁绊打开" onclick="aa()"/>
+			<input type="button" value="羁绊关闭" onclick="bb()"/>
+			<br/>
+			<input type="button" onclick="showtext()" value="阵容打开" />
+			<input type="button" onclick="hidetext()" value="阵容关闭" />
+		</div> 
+   </form>
+   <!--
+   	阵容开始
+   -->
+   <div class="txt">
+   		<p id="con"><b>刺客</b>：<span>3</span>刺客获得<span>150%</span>的暴击伤害&rarr;<span>6</span>刺客获得<span>300%</span>的暴击伤害
+   		<br/>
+   		<b>剑士</b>:
+   		<span>3</span>剑士每次攻击有<span>35%</span>几率打出<span>1</span>次额外攻击&rarr;<span>6</span>剑师，剑士每次攻击有<span>35%</span>几率打出<span>2</span>次额外攻击
+   		<br/>
+   		<b>斗士</b>：
+   		<span>2</span>斗士获得<span>300</span>点最大生命值&rarr;
+<span>4</span>斗士获得<span>700</span>点最大生命值
+		<br>
+		<b>元素使</b>:
+		<span>3</span>个,召唤一个元素之灵
+		<br>
+		<b>守护者</b>:
+		<span>2</span>个,所有守护者和邻近格子的友军获得30点护甲加成
+		<br>
+		<b>枪手</b>:
+		<span>2</span>枪手有<span>50%</span>几率对随机一个敌人打出额外攻击&rarr;<span>4</span>枪手有<span>50%</span>几率对范围内2敌人打出额外攻击
+		<br>
+		<b>骑士</b>:
+		<span>2</span>骑士格挡普攻的<span>20</span>点伤害&rarr;<span>4</span>骑士格挡普攻的<span>40</span>点伤害&rarr;<span>6</span>骑士格挡普攻的<span>80</span>点伤害
+		<br>
+		<b>游侠</b>:
+		<span>2</span>个-每过3秒，有<span>25%</span>几率使得他们的攻速翻倍，持续3秒&rarr;
+<span>4</span>个-每过3秒，有<span>65%</span>几率使得他们的攻速翻倍，持续3秒
+		<br>
+		<b>换形师</b>:
+		<span>3</span>变形时获得额外的75%最大生命值
+		<br>
+		<b>法师</b>:
+		<span>3</span>个友军获得35点魔法伤害&rarr;
+<span>6</span>个友军获得100点魔法伤害。
+</p>
+	<!--
+    	阵容结束
+    -->
+    
+    <div>
+    	
+    </div>
+  </div>
+		
+
+		
 		
 		<script>
 			//弹出窗口
 	function wopen(){
-	window.open('https://solo-ly.github.io/daydayup/','_blank','width=300,height=200,menubar=no,toolbar=no, status=no,scrollbars=yes');
-	}
+	window.open('https://solo-ly.github.io/daydayup/indexooo','_blank','width=350,height=400,menubar=no,toolbar=no, status=no,scrollbars=yes');
+	}	
+	function hidetext()  
+		{  
+		var mychar = document.getElementById("con")
+        .style.display="none";
+		}  
+		function showtext()  
+		{  
+		var mychar = document.getElementById("con")
+        .style.display.value="block";
+		}
+		
+		
+		
+	function bb()  
+		{  
+		var mychar = document.getElementById("con")
+        .style.display.value="none";
+		}  
+		function aa()  
+		{  
+		var mychar = document.getElementById("con")
+        .style.display="block";
+		}
+	
 		</script>
 	</body>
 </html>
